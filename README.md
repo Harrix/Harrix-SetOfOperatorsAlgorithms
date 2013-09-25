@@ -26,7 +26,7 @@ https://github.com/Harrix/HarrixSetOfOperatorsAlgorithms
 История проекта
 ---------------
 
-Подробный список изменений в файле CHANGELOG.md.
+Подробный список изменений в файле [CHANGELOG.md](../master/CHANGELOG.md).
 
 Контакты
 --------
