@@ -1,27 +1,176 @@
-\documentclass[a4paper,12pt]{report}
+\documentclass[a4paper,12pt]{article}
 
 \input{packages}
 \input{styles}
+
+\title{Описание множества операторов для алгоритмов оптимизации. v. 1.0}
+\author{А.\,Б. Сергиенко}
+\date{\today}
+
 
 \begin{document}
 
 \input{names}
 
-\input{title}			% Титульный лист
-\input{contents}		% Содержание
-\input{symbols}			% Условные обозначения
-\input{introduction}	% Введение
-\input{part1}			% Задачи вещественной оптимизации
-\input{part2}			% Задачи бинарной оптимизации
+\maketitle
 
-\input{conclusion}		% Заключение
-%\input{lists}			% Списки таблицы и изображений
+\begin{abstract}
+В данном документе дано собрано множество всяких операторов, которые используются автором в своих исследований. В первую очередь это операторы модификаций генетического алгоритма, а также классические операторы алгоритма.
+\end{abstract}
+
+\tableofcontents
+
+\newpage
+
+\section{Введение}
+
+Это своеобразная <<свалка>> операторов, которые используются автором. На данный документ можно ссылаться в своих работах, чтобы указать, что та или иная модификация операторов подробно описана в этом документе. Тут нет исследований эффективности алгоритмов с данными операторами --- это задача иных проектов. Здесь представлено только описание операторов.
+
+Например, в работе может быть написано следующее: <<Модифицированный генетический алгоритм основан на стандартном генетическом алгоритме (\href{https://github.com/Harrix/Standard-Genetic-Algorithm}{https://github.com/Harrix/Standard-Genetic-Algorithm}). Предложенный алгоритм отличается только оператором скрещивания, и вместо двухточечного скрещивания используется двухточечное скрещивание с возможностью точек разрыва по краям хромосомы (подробное описание смотрите в \href{https://github.com/Harrix/HarrixSetOfOperatorsAlgorithms}{https://github.com/Harrix/HarrixSetOfOperatorsAlgorithms})>>.
+
+Данный документ представляет его версию 1.0 от \today
+
+Последнюю версию документа можно найти по адресу:
+
+\href{https://github.com/Harrix/HarrixSetOfOperatorsAlgorithms}{https://github.com/Harrix/HarrixSetOfOperatorsAlgorithms}
+
+С автором можно связаться по адресу \href{mailto:sergienkoanton@mail.ru}{sergienkoanton@mail.ru} или  \href{http://vk.com/harrix}{http://vk.com/harrix}.
+
+Сайт автора, где публикуются последние новости: \href{http://blog.harrix.org/}{http://blog.harrix.org/}, а проекты располагаются по адресу \href{http://harrix.org/}{http://harrix.org/}.
+
+\section{Условные обозначения}\label{SetOfOperatorsAlgorithms:section_symbols}
+
+$a \in A$ --- элемент $ a $ принадлежит множеству $ A $.
+
+$ \bar{x} $ --- обозначение вектора.
+
+$ \arg{f(x)} $ --- возвращает аргумент $x$, при котором функция принимает значение $ f(x) $.
+
+$ Random(X) $ --- случайный выбор элемента из множества $ X $ с равной вероятностью.
+
+$ Random\left ( \left \{x^i \mid p^i \right \} \right ) $ --- случайный выбор элемента $ x^i $ из множества $ X $, при условии, что каждый элемент $ x^i\in X $ имеет вероятность выбора равную $ p^i $, то есть это обозначение равнозначно предыдущему.
+
+$ random(a,b) $ --- случайное действительное число из интервала $ [a; b] $.
+
+$ int(a) $ --- целая часть действительного числа $ a $.
+
+$ \mu(X) $ --- мощность множества $ X $.
+
+\textbf{Замечание.} Оператор присваивания обозначается через знак «$ = $», так же как и знак равенства.
+
+\textbf{Замечание.} Индексация всех массивов в документе начинается с $ 1 $. Это стоит помнить при реализации алгоритма на C-подобных языках программирования, где индексация начинается с нуля.
+
+\textbf{Замечание.} Вызывание трех функций: $ Random(X) $, $ Random\left ( \left \{x_i \mid p_i \right \} \right ) $, $ random(a,b) $ – происходит каждый раз, когда по ходу выполнения формул, они встречаются. Если формула итерационная, то нельзя перед ее вызовом один раз определить, например, $ random(a,b) $ как константу и потом её использовать на протяжении всех итераций неизменной.
+
+\textbf{Замечание.} Надстрочный индекс может обозначать как возведение в степень, так и индекс элемента. Конкретное обозначение определяется в контексте текста, в котором используется формула с надстрочным индексом. 
+
+\textbf{Замечание.} Если у нас имеется множество векторов, то подстрочный индекс обозначает номер компоненты конкретного вектора, а надстрочный индекс обозначает номер вектора во множестве, например, $ \bar{x}^i \in X $ ($i=\overline{1,N}$), $ \bar{x}^i_j \in \left\lbrace 0; 1\right\rbrace  $, ($j=\overline{1,n}$). В случае, если вектор имеет свое обозначение в виде подстрочной надписи, то компоненты вектора проставляются за скобками, например, $ \left( \bar{x}_{max}\right)_j=0$ ($j=\overline{1,n}$). 
+
+\textbf{Замечание.} При выводе матриц и векторов элементы могут разделяться как пробелом, так и точкой с запятой, то есть обе записи $ {\left(\begin{array}{cccccccc}
+ 1&1&1&1&1&1&1&1
+\end{array} \right)}^\mathrm{T} $ и $ {\left(1;1;1;1;1;1;1;1;1 \right)}^\mathrm{T} $ допустимы.
+
+\textbf{Замечание.} При выводе множеств элементы разделяются только точкой с запятой, то есть допустима только такая запись: $ {\left\lbrace 1;1;1;1;1;1;1;1;1 \right\rbrace }^\mathrm{T} $.
+
+\section{Операторы селекции}\label{SetOfOperatorsAlgorithms:section_selection}
+
+Селекция --- оператор случайного выбора одного индивида из популяции, основываясь на значениях функции пригодности всех индивидов текущей популяции, для использования его в операторе скрещивания. При этом вероятность выбора у индивидов с более высокой пригодностью выше, чем у индивидов с более низкой пригодностью.
+
+\subsection{Пропорциональная селекция}
+
+Вероятность выбора элемента пропорциональна значению пригодности индивида. Данный вид селекции может работать только с неотрицательными значениями пригодности.
+
+Пропорциональная селекция определяется формулой:
+
+\begin{equation}
+\label{SetOfOperatorsAlgorithms:eq:ProportionalSelection2}
+Selection\left( Population, Fitness, DataOfSel\right) = Random\left( \left\lbrace\bar{x}^i | p^i \right\rbrace \right),
+\end{equation}
+\begin{equation}
+p^i=\left\lbrace \begin{aligned}
+\dfrac{f_{fit}\left( \bar{x}^i\right) }{\sum_{j=1}^N{f_{fit}\left( \bar{x}^j\right)}},&\text { если }  \exists f_{fit}\left( \bar{x}^k\right)\neq 0 \left( k=\overline{1,N} \right); \\ \dfrac{1}{N} ,&\text { иначе}.
+\end{aligned}\right.
+\end{equation}
+
+где $ \bar{x}^i \in Population, i=\overline{1,N} $.
+
+Как видим, формула определения вероятности выбора индивида имеет составной вид. Второе условие предназначено для маловероятного случая, когда в популяции все индивиды будут иметь пригодность равную нулю.
+
+\textbf{Пример.} Пусть $ Fitness=\left\lbrace 0,5; 0,2; 0,1; 0,6; 0,2; 0,4\right\rbrace $. Тогда вероятности выбора индивидов равны:
+\begin{flalign*}
+p_1&=\frac{0,5}{0,5 + 0,2 + 0,1 + 0,6 + 0,2 + 0,4}=0,25;\\
+p_2&=\frac{0,2}{0,5 + 0,2 + 0,1 + 0,6 + 0,2 + 0,4}=0,1;\\
+p_3&=\frac{0,1}{0,5 + 0,2 + 0,1 + 0,6 + 0,2 + 0,4}=0,05;\\
+p_4&=\frac{0,6}{0,5 + 0,2 + 0,1 + 0,6 + 0,2 + 0,4}=0,3;\\
+p_5&=\frac{0,2}{0,5 + 0,2 + 0,1 + 0,6 + 0,2 + 0,4}=0,1;\\
+p_6&=\frac{0,4}{0,5 + 0,2 + 0,1 + 0,6 + 0,2 + 0,4}=0,2.
+\end{flalign*}
+
+\begin{figure} [H] 
+  \center
+  \includegraphics [scale=0.7] {ProportionalSelection}
+  \caption{Механизм работы пропорциональной селекции} 
+  \label{SetOfOperatorsAlgorithms:img:ProportionalSelection}  
+\end{figure}
+
+\subsection{Ранговая селекция}
+
+Работает не  с массивом пригодностей напрямую, а массивом нормированных рангов, присваиваемых индивидам на основе значений пригодности. Используется функция, которая проставляет ранги для элементов несортированного массива пригодностей, то есть номера, начиная с $ 1 $, в отсортированном массиве. Если в массиве есть несколько одинаковых элементов, то ранги им присуждаются как среднеарифметические ранги этих элементов в отсортированном массиве. Если это не сделать, то вероятность выбора индивидов одинаковых по функции пригодности будет не равна друг другу, что противоречит идеи оператора селекции. Далее для выбора индивидов используется пропорциональная селекция, работающая с массивом рангов.
+
+Значит, ранговая селекция определяется формулой:
+
+\begin{equation}
+\label{SetOfOperatorsAlgorithms:eq:RankSelection2}
+Selection\left( Population, Fitness, DataOfSel\right) = Random\left( \left\lbrace\bar{x}^i | p^i \right\rbrace \right),
+\end{equation}
+\begin{equation}
+p^i=\dfrac{Rank\left( f_{fit}\left( \bar{x}^i\right)\right)  }{\sum_{j=1}^N{Rank\left( f_{fit}\left( \bar{x}^j\right)\right)}},
+\end{equation}
+\begin{equation}\label{SetOfOperatorsAlgorithms:eq:Rank}
+Rank\left( f_{fit}\left( \bar{x}^i\right)\right)=\dfrac{\sum_{j=1}^{N}{NumberOfSorting\left( f_{fit}\left( \bar{x}^i\right), Fitness\right)  \cdot S\left(  f_{fit}\left( \bar{x}^i\right),  f_{fit}\left( \bar{x}^j\right)\right) }}{\sum_{j=1}^{N}{S\left(  f_{fit}\left( \bar{x}^i\right),  f_{fit}\left( \bar{x}^j\right)\right) }},
+\end{equation}
+\begin{equation}
+S\left(  f_{fit}\left( \bar{x}^i\right),  f_{fit}\left( \bar{x}^j\right)\right)= \left\lbrace \begin{array}{l}
+1 \text{, если } f_{fit}\left( \bar{x}^i\right)=  f_{fit}\left( \bar{x}^j\right);\\ 0\text{, если } f_{fit}\left( \bar{x}^i\right)\neq  f_{fit}\left( \bar{x}^j\right).
+\end{array}\right.
+\end{equation}
+
+где $ \bar{x}^i\in Population$, $i=\overline{1,N}.$
+
+$NumberOfSorting\left( f_{fit}\left( \bar{x}^i\right), Fitness\right)$ --- функция, возвращающая номер элемента $ f_{fit}\left( \bar{x}^i\right)) $ в отсортированном массиве $ Fitness $ в порядке возрастания.
+
+Формула (\ref{SetOfOperatorsAlgorithms:eq:Rank}) подсчитывает средние арифметические ранги при условии, что в массиве $ Fitness $  могут встречаться одинаковые элементы.
+
+\textbf{Пример.} Пусть $ Fitness=\left\lbrace 0,5; 0,2; 0,1; 0,6; 0,2; 0,4\right\rbrace $. Тогда вероятности выбора индивидов равны:
+\begin{flalign*}
+p_1&=\frac{5}{5+2,5+1+6+2,5+4}=0,238;\\
+p_2&=\frac{2,5}{5+2,5+1+6+2,5+4}=0,119;\\
+p_3&=\frac{1}{5+2,5+1+6+2,5+4}=0,047;;\\
+p_4&=\frac{6}{5+2,5+1+6+2,5+4}=0,286;\\
+p_5&=\frac{2,5}{5+2,5+1+6+2,5+4}=0,119;\\
+p_6&=\frac{4}{5+2,5+1+6+2,5+4}=0,190.
+\end{flalign*}
+
+\begin{figure} [H] 
+  \center
+  \includegraphics [scale=0.7] {RankSelection}
+  \caption{Механизм работы ранговой селекции} 
+  \label{SetOfOperatorsAlgorithms:img:RankSelection}  
+\end{figure}
+
+\section{Операторы скрещивания}\label{SetOfOperatorsAlgorithms:section_Crossover}
+
+111
+
+\section{Иные операторы}\label{SetOfOperatorsAlgorithms:section_other}
+
+111
+
 
 % Список литературы
-\addcontentsline{toc}{chapter}{\bibname}
+\addcontentsline{toc}{section}{Список литературы}
 \bibliographystyle{utf8gost705u}  %% стилевой файл для оформления по ГОСТу
 \bibliography{biblio}     %% имя библиографической базы (bib-файла)
-
-%\input{appendix}		% Приложения
+\newpage
 
 \end{document}
