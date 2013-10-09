@@ -4,3 +4,4 @@ HarrixSetOfOperatorsAlgorithms
 1.0
 ---
  * Первичные наброски.
+ * Добавлены операторы из ГА.
