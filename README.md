@@ -7,18 +7,25 @@ HarrixSetOfOperatorsAlgorithms
 
 https://github.com/Harrix/HarrixSetOfOperatorsAlgorithms
 
-Файлы распространяются по лицензии [Apache License, Version 2.0](../master/LICENSE.txt).
+Файл распространяются по лицензии [Apache License, Version 2.0](../master/LICENSE.txt).
+
+Информация находится в файле [**_HarrixSetOfOperatorsAlgorithms.pdf**](../master/_HarrixSetOfOperatorsAlgorithms.pdf).
 
 Это своеобразная "свалка" операторов, которые используются автором. На данный документ можно ссылаться в своих работах, чтобы указать, что та или иная модификация операторов подробно описана в этом документе. Тут нет исследований эффективности алгоритмов с данными операторами - это задача иных проектов. Здесь представлено только описание операторов.
 
 Например, в работе может быть написано следующее: "Модифицированный генетический алгоритм основан на стандартном генетическом алгоритме (https://github.com/Harrix/Standard-Genetic-Algorithm). Предложенный алгоритм отличается только оператором скрещивания, и вместо двухточечного скрещивания используется двухточечное скрещивание с возможностью точек разрыва по краям хромосомы (подробное описание смотрите в https://github.com/Harrix/HarrixSetOfOperatorsAlgorithms)".
 
+Пример оператора
+----------------
+
+![alt text](../master/images/example.png "Пример графика одного из оператора")
+
 Про структуру проекта
 ---------------------
 
-В папке **Source** располагаются файлы непосредственно документа, где находится файл **_HarrixSetOfOperatorsAlgorithms.tex** (это исходник pdf документа) и файлы, которые являются вызываемыми или вспомогательными для _HarrixSetOfOperatorsAlgorithms.tex.
+Файл [**_HarrixSetOfOperatorsAlgorithms.pdf**](../master/_HarrixSetOfOperatorsAlgorithms.pdf) - это непосредственно сам документ.
 
-Файл **_HarrixSetOfOperatorsAlgorithms.pdf** - это непосредственно сам документ.
+В папке [**_HarrixSetOfOperatorsAlgorithms.tex**](../master/Source/_HarrixSetOfOperatorsAlgorithms.tex) располагаются файлы непосредственно документа, где находится файл [**Source**](../master/Source) (это исходник pdf документа) и файлы, которые являются вызываемыми или вспомогательными для [**_HarrixSetOfOperatorsAlgorithms.tex**](../master/Source/_HarrixSetOfOperatorsAlgorithms.tex).
 
 Сведения для редактирования файлов
 ----------------------------------
