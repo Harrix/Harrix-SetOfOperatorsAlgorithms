@@ -25,7 +25,7 @@ https://github.com/Harrix/HarrixSetOfOperatorsAlgorithms
 
 Файл [**_HarrixSetOfOperatorsAlgorithms.pdf**](../master/_HarrixSetOfOperatorsAlgorithms.pdf) - это непосредственно сам документ.
 
-В папке [**_HarrixSetOfOperatorsAlgorithms.tex**](../master/Source/_HarrixSetOfOperatorsAlgorithms.tex) располагаются файлы непосредственно документа, где находится файл [**Source**](../master/Source) (это исходник pdf документа) и файлы, которые являются вызываемыми или вспомогательными для [**_HarrixSetOfOperatorsAlgorithms.tex**](../master/Source/_HarrixSetOfOperatorsAlgorithms.tex).
+В папке [**Source**](../master/Source) располагаются файлы непосредственно документа, где находится файл [**_HarrixSetOfOperatorsAlgorithms.tex**](../master/Source/_HarrixSetOfOperatorsAlgorithms.tex) (это исходник pdf документа) и файлы, которые являются вызываемыми или вспомогательными для [**_HarrixSetOfOperatorsAlgorithms.tex**](../master/Source/_HarrixSetOfOperatorsAlgorithms.tex).
 
 Сведения для редактирования файлов
 ----------------------------------
