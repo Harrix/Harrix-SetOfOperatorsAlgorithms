@@ -1,0 +1,35 @@
+\subsection{Мутация} \label{SetOfOperatorsAlgorithms:Mutation}
+
+Идентификатор: \textbf{Mutation}.
+
+Данный оператор используется для бинарных векторов.
+
+\textbf{Мутация} --- оператор случайного изменения всех потомков из популяции. Цель данного оператора  не получить более лучшее решение, а разнообразить многообразие рассматриваемых индивидов. Обычно мутация предполагает незначительное изменение вектора. При выполнении оператора каждый ген каждого индивида с некоторой заданной вероятностью  $ ProbabilityOfMutation $ мутирует, то есть меняет свое значение на противоположное. Пусть у нас имеется некий бинарный вектор $ \overline{x} $.  Мутация происходит по формулам:
+\begin{align}
+\label{SetOfOperatorsAlgorithms:eq:Mutation}
+&\overline{MutChild}_j=\left\lbrace \begin{aligned}
+\overline{x}_j&\text{, если } random \left(0, 1 \right)>ProbabilityOfMutation; \\
+1-\overline{x}_j&\text{, иначе }.
+\end{aligned}\right.
+\end{align}
+
+Обычно в генетическом алгоритме вероятность мутации выбирается из трех вариантов: слабая ($ Weak $), средняя ($ Average $) и сильная ($ Strong $) мутация.
+Отсюда вероятность мутации определяется формулой:
+\begin{align}
+\label{SetOfOperatorsAlgorithms:eq:ProbabilityOfMutation}
+ProbabilityOfMutation\left( TypeOfMutation\right) =\\ =\left\lbrace \begin{aligned}
+\frac{1}{3n}&\text{, если }TypeOfMutation=Weak; \\ \frac{1}{n}&\text{, если }TypeOfMutation=Average; \\ min\left(1, \frac{3}{n}\right) &\text{, если }TypeOfMutation=Strong.
+\end{aligned}\right.\nonumber
+\end{align}
+
+Здесь
+\begin{equation}
+\label{SetOfOperatorsAlgorithms:eq:TypeOfMutation}
+TypeOfMutation \in \left\lbrace Weak; Average;Strong\right\rbrace ,
+\end{equation}
+
+$ n $ --- длина вектора $ \bar{x}\in X $ бинарной задачи оптимизации.
+
+В библиотеке \textbf{HarrixMathLibrary} данная селекция реализуется через функцию \textbf{TMHL\_MutationBinaryMatrix} (сразу мутируют все решения):
+
+\href{https://github.com/Harrix/HarrixMathLibrary}{https://github.com/Harrix/HarrixMathLibrary}

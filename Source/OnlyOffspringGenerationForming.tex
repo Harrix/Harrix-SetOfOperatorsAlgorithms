@@ -1,0 +1,15 @@
+\subsection{Только потомки}\label{SetOfOperatorsAlgorithms:OnlyOffspringGenerationForming}
+
+Идентификатор: \textbf{OnlyOffspringGenerationForming}.
+
+Данный оператор используется для векторов любой природы.
+
+Данная схема предполагает формирование нового поколения из потомков и родителей таким, что в новое поколение попадают только потомки. Данный тип формирования нового поколения определяется формулой:
+\begin{equation}
+\label{SetOfOperatorsAlgorithms:eq:OnlyOffspringGenerationForming}
+Forming \left( \begin{array}{c} Population\\MutChildPopulation\\Fitness\\FitnessOfMutChild\\DataOfForm\end{array}\right) =\left( \begin{array}{c} MutChildPopulation\\FitnessOfMutChild\end{array}\right).
+\end{equation}
+
+Здесь $ Population $ --- множество родителей, $MutChildPopulation$ --- множество потомков, $ Fitness $ -- множество значений целевой функции множества родителей, $ FitnessOfMutChild $ -- множество значений целевой функции множества родителей. 
+
+$ DataOfForm $ не содержит каких-либо параметров относительно данного типа формирования нового поколения.

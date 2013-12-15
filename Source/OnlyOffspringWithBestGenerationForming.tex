@@ -1,0 +1,19 @@
+\subsection{Только потомки и копия лучшего индивида}\label{SetOfOperatorsAlgorithms:OnlyOffspringWithBestGenerationForming}
+
+Идентификатор: \textbf{OnlyOffspringWithBestGenerationForming}.
+
+Данный оператор используется для векторов любой природы.
+
+Данная схема предполагает формирование нового поколения из потомков и родителей таким, что в новое поколение попадают только потомки (без одного) и копия лучшего индивида $ \overline{Best} $ (лучшего за всё время работы генетического алгоритма, а не только текущего поколения). В русской литературе данный способ часто называют селекцией элитизма. Данный тип формирования нового поколения определяется формулой:
+
+\begin{align}
+\label{SetOfOperatorsAlgorithms:eq:OnlyOffspringWithBestGenerationForming}
+&Forming \left( \begin{array}{c} Population\\MutChildPopulation\\Fitness\\FitnessOfMutChild\\DataOfForm\end{array}\right) =\left( \begin{array}{c} \left\lbrace \bar{x}^i\right\rbrace \\\left\lbrace f^i\right\rbrace\end{array}\right),\\&\bar{x}^i=\left\lbrace \begin{aligned}
+\overline{Best}&\text{, если }i=0; \\ \overline{MutChild}^i&\text{, если }i\neq 0;
+\end{aligned}\right.\nonumber\\
+&f_i=f\left( \bar{x}_i\right), i=\overline{1,N}.\nonumber
+\end{align}
+
+Здесь $ Population $ --- множество родителей, $MutChildPopulation$ --- множество потомков, $ Fitness $ -- множество значений целевой функции множества родителей, $ FitnessOfMutChild $ -- множество значений целевой функции множества родителей. 
+
+$ DataOfForm $ не содержит каких-либо параметров относительно данного типа формирования нового поколения.
