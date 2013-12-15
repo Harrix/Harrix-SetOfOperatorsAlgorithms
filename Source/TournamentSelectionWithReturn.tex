@@ -1,0 +1,26 @@
+\subsection{Турнирная селекция с возвращением}\label{SetOfOperatorsAlgorithms:TournamentSelectionWithReturn}
+
+Идентификатор: \textbf{TournamentSelectionWithReturn}.
+
+Из популяции с равной вероятностью выбираются индивиды в количестве $ T $ (размер турнира), где $ 2\leq T\leq PopulationSize $ ($ PopulationSize $ --- размер популяции). При этом каждый индивид может попасть в группу (турнир) сколько угодно раз (турнирная селекция с возвращением). То есть после того, как мы выбрали индивида, мы запоминаем его номер и возвращаем обратно в популяцию, где он на равных правах может попасть заново в этот турнир. Из данной выбранной группы выбирается индивид с наибольшей пригодностью.
+
+Технически данную селекцию проще организовать путем генерации целых чисел по равномерному закону распределению от $ 1 $ до $ PopulationSize $ (на С++ от $ 0 $ до $ PopulationSize-1 $) в количестве $ T $ штук. При этом в полученной выборке могут попадаться одинаковые числа. Данные числа будут обозначать номера индивидов в популяции. И затем выберем лучшего индивида.
+
+Значит, турнирная селекция определяется формулой:
+\begin{align}
+\label{SetOfOperatorsAlgorithms:eq:TournamentSelectionWithReturn}
+Selection\left( Population, Fitness, DataOfSel\right) = \arg{\max_{\bar{x}\in H} {f_{fit}\left( \bar{x}\right) }}, \text{где }\\
+H=\left\lbrace h^i | h_i=Random \left( Population \right) \right\rbrace, i=\overline{1,T}\nonumber.
+\end{align}
+
+Турнирная селекция с возвращением добавляет в $ DataOfSel $ дополнительный параметр --– размер турнира $ T $. Обычно выбирают значение этого параметра равное $ T=2 $.
+
+\begin{equation}
+DataOfSel=\left( \begin{array}{c} TypeOfSel \\ T \end{array} \right).
+\end{equation}
+
+Нет ограничений на множество задач оптимизации, которые может решать алгоритм оптимизации с данной селекцией.
+
+В библиотеке \textbf{HarrixMathLibrary} данная селекция реализуется через функцию \textbf{MHL\_TournamentSelectionWithReturn}:
+
+\href{https://github.com/Harrix/HarrixMathLibrary}{https://github.com/Harrix/HarrixMathLibrary}

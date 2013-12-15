@@ -1,6 +1,10 @@
 HarrixSetOfOperatorsAlgorithms
 ==============================
 
+1.3
+---
+ * Добавление информации о TournamentSelectionWithReturn.
+
 1.2
 ---
  * Разделение в исходниках на отдельные tex файлы.
