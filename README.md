@@ -20,7 +20,7 @@ https://github.com/Harrix/HarrixSetOfOperatorsAlgorithms
 Установка
 ---------
 
-Прочитать подробно об установке и примерах использования можно тут http://blog.harrix.org/?p=1226.
+Прочитать подробно об установке можно тут http://blog.harrix.org/?p=1226.
 
 Пример оператора
 ----------------
