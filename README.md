@@ -46,7 +46,7 @@ https://github.com/Harrix/HarrixSetOfOperatorsAlgorithms
 Использованные технологии
 -------------------------
 
-- LaTeX, Qt, MiKTeX, BibTex, TeXstudio, pscyr.
+- LaTeX, MiKTeX, BibTex, TeXstudio, pscyr.
 - HarrixLaTeXDocumentTemplate.
 
 История проекта
