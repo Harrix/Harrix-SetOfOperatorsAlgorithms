@@ -1,6 +1,10 @@
 HarrixSetOfOperatorsAlgorithms
 ==============================
 
+1.5
+---
+ * Добавлены операторы SinglepointCrossoverForReal, TwopointCrossoverForReal, UniformCrossoverForReal.
+
 1.4
 ---
  * Перекомпилировано с новыми файлами ссылок, стилевых файлов.

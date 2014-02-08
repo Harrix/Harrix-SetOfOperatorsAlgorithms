@@ -1,0 +1,22 @@
+\subsection{Равномерное скрещивание для вещественных векторов}\label{SetOfOperatorsAlgorithms:UniformCrossoverForReal}
+
+Идентификатор: \textbf{UniformCrossoverForReal}.
+
+Данный оператор скрещивания используется для вещественных векторов.
+
+По сути ничем не отличается от \hyperref[SetOfOperatorsAlgorithms:UniformCrossover]{UniformCrossover}, кроме типа векторов, на котором работает оператор.
+
+Пусть имеется два родителя (родительские хромосомы) $\overline{Parent}^1$ и $\overline{Parent}^2$. Потомок состоит из генов, каждый из которых выбран случайно из генов родителей на соответствующих позициях. То есть скрещивание происходит по формулам:
+
+\begin{align}
+\label{SetOfOperatorsAlgorithms:eq:UniformCrossoverForReal}
+&Crossover \left( \overline{Parent}^1, \overline{Parent}^2, DataOfCros\right) = \overline{Offspring};\\
+& \overline{Offspring}_i=Random\left( \left\lbrace \overline{Parent}^1_i;\overline{Parent}^2_i\right\rbrace \right), i=\overline{1,n} ;\nonumber\\
+&\overline{Offspring}\in X.\nonumber
+\end{align}
+
+$ DataOfCros $ не содержит каких-либо параметров относительно данного типа скрещивания.
+
+В библиотеке \textbf{HarrixMathLibrary} данная селекция реализуется через функцию \textbf{MHL\_UniformCrossoverForReal}:
+
+\href{https://github.com/Harrix/HarrixMathLibrary}{https://github.com/Harrix/HarrixMathLibrary}
