@@ -11,7 +11,7 @@ HarrixSetOfOperatorsAlgorithms
 
 Информация находится в файле [**_HarrixSetOfOperatorsAlgorithms.pdf**](https://github.com/Harrix/HarrixSetOfOperatorsAlgorithms/blob/master/_HarrixSetOfOperatorsAlgorithms.pdf).
 
-Прямая ссылка на скачивание: [**_HarrixSetOfOperatorsAlgorithms.pdf**](https://raw.github.com/Harrix/HarrixSetOfOperatorsAlgorithms/blob/master/_HarrixSetOfOperatorsAlgorithms.pdf).
+Прямая ссылка на скачивание: [**_HarrixSetOfOperatorsAlgorithms.pdf**](https://raw.github.com/Harrix/HarrixSetOfOperatorsAlgorithms/master/_HarrixSetOfOperatorsAlgorithms.pdf).
 
 Это своеобразная "свалка" операторов, которые используются автором. На данный документ можно ссылаться в своих работах, чтобы указать, что та или иная модификация операторов подробно описана в этом документе. Тут нет исследований эффективности алгоритмов с данными операторами - это задача иных проектов. Здесь представлено только описание операторов.
 
