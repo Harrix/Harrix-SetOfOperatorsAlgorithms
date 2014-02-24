@@ -5,7 +5,7 @@ HarrixSetOfOperatorsAlgorithms
 
 Описание множества операторов для алгоритмов оптимизации.
 
-https://github.com/Harrix/HarrixSetOfOperatorsAlgorithms
+[https://github.com/Harrix/HarrixSetOfOperatorsAlgorithms](https://github.com/Harrix/HarrixSetOfOperatorsAlgorithms)
 
 Файл распространяются по лицензии [Apache License, Version 2.0](../master/LICENSE.txt).
 
