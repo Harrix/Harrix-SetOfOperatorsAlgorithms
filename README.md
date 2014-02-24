@@ -25,7 +25,9 @@ HarrixSetOfOperatorsAlgorithms
 Пример оператора
 ----------------
 
-![alt text](https://github.com/Harrix/HarrixSetOfOperatorsAlgorithms/blob/master/images/example.png "Пример графика одного из оператора")
+![alt text](https://raw.github.com/Harrix/HarrixSetOfOperatorsAlgorithms/master/images/example.png "Пример графика одного из оператора")
+
+https://raw.github.com/Harrix/Standard-Genetic-Algorithm/master/_Standard-Genetic-Algorithm.pdf
 
 Про структуру проекта
 ---------------------
