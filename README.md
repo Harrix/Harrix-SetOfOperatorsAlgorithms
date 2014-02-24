@@ -7,9 +7,9 @@ HarrixSetOfOperatorsAlgorithms
 
 [https://github.com/Harrix/HarrixSetOfOperatorsAlgorithms](https://github.com/Harrix/HarrixSetOfOperatorsAlgorithms)
 
-Файл распространяются по лицензии [Apache License, Version 2.0](../master/LICENSE.txt).
+Файл распространяются по лицензии [Apache License, Version 2.0](https://github.com/Harrix/HarrixSetOfOperatorsAlgorithms/master/LICENSE.txt).
 
-Информация находится в файле [**_HarrixSetOfOperatorsAlgorithms.pdf**](../master/_HarrixSetOfOperatorsAlgorithms.pdf).
+Информация находится в файле [**_HarrixSetOfOperatorsAlgorithms.pdf**](https://github.com/Harrix/HarrixSetOfOperatorsAlgorithms/master/_HarrixSetOfOperatorsAlgorithms.pdf).
 
 Прямая ссылка на скачивание: [**_HarrixSetOfOperatorsAlgorithms.pdf**](https://raw.github.com/Harrix/HarrixSetOfOperatorsAlgorithms/master/_HarrixSetOfOperatorsAlgorithms.pdf).
 
@@ -20,28 +20,28 @@ HarrixSetOfOperatorsAlgorithms
 Установка
 ---------
 
-Прочитать подробно об установке можно тут http://blog.harrix.org/?p=1226.
+Прочитать подробно об установке можно тут [http://blog.harrix.org/?p=1226](http://blog.harrix.org/?p=1226).
 
 Пример оператора
 ----------------
 
-![alt text](../master/images/example.png "Пример графика одного из оператора")
+![alt text](https://github.com/Harrix/HarrixSetOfOperatorsAlgorithms/master/images/example.png "Пример графика одного из оператора")
 
 Про структуру проекта
 ---------------------
 
-Файл [**_HarrixSetOfOperatorsAlgorithms.pdf**](../master/_HarrixSetOfOperatorsAlgorithms.pdf) - это непосредственно сам документ.
+Файл [**_HarrixSetOfOperatorsAlgorithms.pdf**](https://github.com/Harrix/HarrixSetOfOperatorsAlgorithms/master/_HarrixSetOfOperatorsAlgorithms.pdf) - это непосредственно сам документ.
 
-В папке [**Source**](../master/Source) располагаются файлы непосредственно документа, где находится файл [**_HarrixSetOfOperatorsAlgorithms.tex**](../master/Source/_HarrixSetOfOperatorsAlgorithms.tex) (это исходник pdf документа) и файлы, которые являются вызываемыми или вспомогательными для [**_HarrixSetOfOperatorsAlgorithms.tex**](../master/Source/_HarrixSetOfOperatorsAlgorithms.tex).
+В папке [**Source**](https://github.com/Harrix/HarrixSetOfOperatorsAlgorithms/master/Source) располагаются файлы непосредственно документа, где находится файл [**_HarrixSetOfOperatorsAlgorithms.tex**](https://github.com/Harrix/HarrixSetOfOperatorsAlgorithms/master/Source/_HarrixSetOfOperatorsAlgorithms.tex) (это исходник pdf документа) и файлы, которые являются вызываемыми или вспомогательными для [**_HarrixSetOfOperatorsAlgorithms.tex**](https://github.com/Harrix/HarrixSetOfOperatorsAlgorithms/master/Source/_HarrixSetOfOperatorsAlgorithms.tex).
 
 Сведения для редактирования файлов
 ----------------------------------
 
 Для полноценной работы редактированию LaTeX документа вам потребуются программа для компиляции \*.tex документов в \*.pdf. Автор использует для этого связку [MiKTex](http://www.miktex.org/) и [TeXstudio](http://texstudio.sourceforge.net/). 
 
-В варианте, который использует автор, в \*.tex файлах справок для отображения русских букв используется модуль pscyr. Об его установке можно прочитать (и скачать) в статье http://blog.harrix.org/?p=444.
+В варианте, который использует автор, в \*.tex файлах справок для отображения русских букв используется модуль pscyr. Об его установке можно прочитать (и скачать) в статье [http://blog.harrix.org/?p=444](http://blog.harrix.org/?p=444).
 
-Подробное описание установки и настройки связки MiKTeX + TeXstudio + pscyr можно прочитать в статье http://blog.harrix.org/?p=849.
+Подробное описание установки и настройки связки MiKTeX + TeXstudio + pscyr можно прочитать в статье [http://blog.harrix.org/?p=849](http://blog.harrix.org/?p=849).
 
 Использованные технологии
 -------------------------
@@ -52,7 +52,7 @@ HarrixSetOfOperatorsAlgorithms
 История проекта
 ---------------
 
-Подробный список изменений в файле [CHANGELOG.md](../master/CHANGELOG.md).
+Подробный список изменений в файле [CHANGELOG.md](https://github.com/Harrix/HarrixSetOfOperatorsAlgorithms/master/CHANGELOG.md).
 
 Контакты
 --------
