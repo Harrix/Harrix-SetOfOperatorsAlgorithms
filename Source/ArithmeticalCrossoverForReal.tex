@@ -5,7 +5,6 @@
 Данный оператор скрещивания используется для вещественных векторов.
 
 Пусть имеется два родителя (родительские хромосомы) $ \overline{Parent}^1 $ и $ \overline{Parent}^2$ длины $n$. Гены первого потомка формируются как сумма долей $w$ генов первого и $ \left( 1-w\right) $ долей второго родителя. Второй потом генерируется алогично, но доли меняются местами.  Из них выбирается случайно один потомок, который и передается в качестве результата оператора скрещивания. То есть скрещивание происходит по формулам:
-
 \begin{align}
 \label{SetOfOperatorsAlgorithms:eq:ArithmeticalCrossoverForReal}
 &Crossover \left( \overline{Parent}^1, \overline{Parent}^2, DataOfCros\right)=Random \left(\left\lbrace \overline{Offspring}^1; \overline{Offspring}^2\right\rbrace  \right), \\
