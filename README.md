@@ -7,7 +7,7 @@ HarrixSetOfOperatorsAlgorithms
 
 [https://github.com/Harrix/HarrixSetOfOperatorsAlgorithms](https://github.com/Harrix/HarrixSetOfOperatorsAlgorithms)
 
-Файл распространяются по лицензии [Apache License, Version 2.0](https://github.com/Harrix/HarrixSetOfOperatorsAlgorithms/blob/master/LICENSE.txt).
+Файл распространяются по лицензии [MIT](https://github.com/Harrix/HarrixSetOfOperatorsAlgorithms/blob/master/LICENSE).
 
 Информация находится в файле [**_HarrixSetOfOperatorsAlgorithms.pdf**](https://github.com/Harrix/HarrixSetOfOperatorsAlgorithms/blob/master/_HarrixSetOfOperatorsAlgorithms.pdf).
 
