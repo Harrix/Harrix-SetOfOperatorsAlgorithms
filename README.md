@@ -7,7 +7,7 @@ HarrixSetOfOperatorsAlgorithms
 
 [https://github.com/Harrix/HarrixSetOfOperatorsAlgorithms](https://github.com/Harrix/HarrixSetOfOperatorsAlgorithms)
 
-Файл распространяются по лицензии [MIT](https://github.com/Harrix/HarrixSetOfOperatorsAlgorithms/blob/master/LICENSE).
+Файл распространяются по лицензии [CC BY 4.0](https://github.com/Harrix/HarrixSetOfOperatorsAlgorithms/blob/master/LICENSE.md).
 
 Информация находится в файле [**_HarrixSetOfOperatorsAlgorithms.pdf**](https://github.com/Harrix/HarrixSetOfOperatorsAlgorithms/blob/master/_HarrixSetOfOperatorsAlgorithms.pdf).
 
@@ -37,7 +37,7 @@ HarrixSetOfOperatorsAlgorithms
 Сведения для редактирования файлов
 ----------------------------------
 
-Для полноценной работы редактированию LaTeX документа вам потребуются программа для компиляции \*.tex документов в \*.pdf. Автор использует для этого связку [MiKTex](http://www.miktex.org/) и [TeXstudio](http://texstudio.sourceforge.net/). 
+Для полноценной работы редактированию LaTeX документа вам потребуются программа для компиляции \*.tex документов в \*.pdf. Автор использует для этого связку [MiKTex](http://www.miktex.org/) и [TeXstudio](http://texstudio.sourceforge.net/).
 
 В варианте, который использует автор, в \*.tex файлах справок для отображения русских букв используется модуль pscyr. Об его установке можно прочитать (и скачать) в статье [http://blog.harrix.org/?p=444](http://blog.harrix.org/?p=444).
 
